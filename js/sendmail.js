@@ -1,4 +1,6 @@
 const appontmentButton = document.getElementById("submitAppointment");
+const inquiryButton = document.getElementById("sendInquiry");
+
 // TODO MAKE FUNCTION FOR SENDING EMAILS ON MAKE APPOINTMENT
 //TODO MAKE FUNCTION FOR SENDING ON INQUIRY
 
@@ -28,11 +30,11 @@ const appointmentMessage = document.querySelector(".appointmentMessage");
 
 function getFormData() {
 	if (
-		appointmentName &&
-		appointmentEmail &&
-		appointmentPhone &&
-		appointmentDate &&
-		appointmentAge
+		appointmentName !== "" &&
+		appointmentEmail !== "" &&
+		appointmentPhone !== "" &&
+		appointmentDate !== "" &&
+		appointmentAge !== ""
 	) {
 		return {
 			name: appointmentName.value,
@@ -101,6 +103,37 @@ async function sendEmail(email, subject, body) {
 		// console.log(message);
 	});
 }
+
+function getInquiryData() {
+	const inquiryName = document.getElementById("inquiryName");
+	const inquiryEmail = document.getElementById("inquiryEmail");
+	const inquirySubject = document.getElementById("inquirySubject");
+	const inquiryMessage = document.getElementById("inquiryMessage");
+
+	return {
+		name: inquiryName.value,
+		email: inquiryEmail.value,
+		subject: inquirySubject.value,
+		message: inquiryMessage.value,
+	};
+
+	// inquiryName
+	// inquiryEmail
+	// inquirySubject
+	// inquiryMessage
+}
+
+function inquiryBodyMessage() {
+	const inquiryData = getInquiryData();
+	console.log(inquiryData);
+}
+
+inquiryButton.addEventListener("click", (event) => {
+	event.preventDefault();
+	inquiryBodyMessage();
+});
+
+function makeInquiry() {}
 
 appontmentButton.addEventListener("click", function (evt) {
 	evt.preventDefault();
