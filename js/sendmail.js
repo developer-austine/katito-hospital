@@ -39,7 +39,7 @@ function getFormData() {
 			phone: appointmentPhone.value,
 			date: appointmentDate.value,
 			age: appointmentAge.value,
-			message: appointmentMessage,
+			message: appointmentMessage.value,
 		};
 	} else {
 		Swal.fire({
@@ -66,7 +66,7 @@ function makeBodyMessage() {
 		"<br><strong>Message:</strong> " +
 		data.message;
 
-	sendEmail(data.email, "Appointment", bodyMessage);
+	sendEmail("info@kmckenya.co.ke", "Appointment", bodyMessage);
 }
 
 async function sendEmail(email, subject, body) {
@@ -78,7 +78,7 @@ async function sendEmail(email, subject, body) {
 		Body: body,
 	}).then((message) => {
 		if (message === "OK") {
-			alert("Message was sent successfully.");
+			// alert("Message was sent successfully.");
 			Swal.fire({
 				icon: "success",
 				text: "Message was sent successfully.",
@@ -93,7 +93,6 @@ async function sendEmail(email, subject, body) {
 				icon: "error",
 				title: "Oops...",
 				text: "Something went wrong! Message was not sent",
-				footer: '<a href="#">Why do I have this issue?</a>',
 			});
 			console.log("Message was not sent.");
 		}

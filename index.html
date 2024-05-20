@@ -31,7 +31,6 @@
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="sweetalert2.min.js"></script>
 <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
@@ -354,6 +353,7 @@
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
+              <label for="date">Add Appointment Date:</label>
               <input
               type="date"
               id="date"
@@ -367,9 +367,9 @@
             <div class="col-md-4 form-group mt-3">
               <select name="age" id="age" class="form-select appointmentAge">
                 <option value="">Select Age</option>
-                <option value="Department 1">Below 18</option>
-                <option value="Department 2">18-40</option>
-                <option value="Department 3">40 above</option>
+                <option value="Bellow 18">Below 18</option>
+                <option value="18-40">18-40</option>
+                <option value="Above 40">40 above</option>
               </select>
               
             </div>
@@ -697,6 +697,8 @@
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="js/main.js"></script>
   <script src="js/animation.js"></script>
