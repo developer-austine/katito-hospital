@@ -1,3 +1,4 @@
+const appontmentButton = document.getElementById("submitAppointment");
 // TODO MAKE FUNCTION FOR SENDING EMAILS ON MAKE APPOINTMENT
 //TODO MAKE FUNCTION FOR SENDING ON INQUIRY
 
@@ -100,8 +101,6 @@ async function sendEmail(email, subject, body) {
 		// console.log(message);
 	});
 }
-
-const appontmentButton = document.getElementById("submitAppointment");
 
 appontmentButton.addEventListener("click", function (evt) {
 	evt.preventDefault();
