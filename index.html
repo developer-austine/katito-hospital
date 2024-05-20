@@ -5,7 +5,6 @@
   <!--
   Author: Austine Ochieng & Elvis Kemoi
   Website:https://github.com/developer-austine and https://github.com/ElvisKemoi
-  Email: your.email@example.com
   Date: 20,May,2024
 -->
 
@@ -32,6 +31,8 @@
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
 <body>
@@ -40,11 +41,11 @@
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">info@kmckenya.co.ke</a>
+        <i class="bi bi-envelope"></i> <a href="mailto:info@kmckenya.co.ke">info@kmckenya.co.ke</a>
         <i class="bi bi-phone"></i> +254 750 - 677 900
       </div>
       <div class="d-none d-lg-flex social-links align-items-center">
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.facebook.com/Katitomedical" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> 
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
@@ -152,7 +153,7 @@
     <div class="row">
     <div id="docimage" class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
      align-items-stretch position-relative">
-    <a href="https://youtu.be/erei6SZjcck?si=uDP27TsZz5YuILDV" class="glightbox play-btn mb-4"></a>
+    <a href="video\An9dyA0zAVrl50CPne9XVnwRskgHl7SPZlo790LDNL4of1-opyptstEYarSs1s4wCt3n-YXhikusffrIgGGR4nSM.mp4" class="glightbox play-btn mb-4"></a>
           </div>
 
     <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
@@ -340,21 +341,28 @@
         <form accept="" role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control appointmentName" id="name" placeholder="Your Name" >
+              <input type="text" name="name" class="form-control appointmentName" id="name" placeholder="Your Name(required)" required >
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control appointmentEmail" name="email" id="email" placeholder="Your Email" >
+              <input type="email" class="form-control appointmentEmail" name="email" id="email" placeholder="Your Email(required)" required >
              
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="tel" class="form-control appointmentPhone" name="phone" id="phone" placeholder="Your Phone" >
+              <input type="tel" class="form-control appointmentPhone" name="phone" id="phone" placeholder="Your Phone (required)" required >
               
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker appointmentDate" id="date" placeholder="Appointment Date" >
-              
+              <input
+              type="date"
+              id="date"
+              class="form-control datepicker appointmentDate"
+              name="meeting-time"
+              placeholder="Appointment Date"
+             required="true"/>
+            
+            
             </div>
             <div class="col-md-4 form-group mt-3">
               <select name="age" id="age" class="form-select appointmentAge">
@@ -365,21 +373,13 @@
               </select>
               
             </div>
-            <div class="col-md-4 form-group mt-3">
-              <select name="doctor" id="doctor" class="form-select appointmentDoctor">
-                <option value="">Select Doctor</option>
-                <option value="Doctor 1">Doctor 1</option>
-                <option value="Doctor 2">Doctor 2</option>
-                <option value="Doctor 3">Doctor 3</option>
-              </select>  
-            </div>
-          </div>
+       
 
           <div class="form-group mt-3">
             <textarea class="form-control  appointmentMessage" name="message" rows="5" placeholder="Message (Optional)"></textarea>
             
           </div>
-          <div class="text-center"><button type="button" onclick="getFormData()">Make an Appointment</button></div>
+          <div class="text-center"><button type="submit"  id="submitAppointment">Make an Appointment</button></div>
         </form>
 
       </div>
@@ -408,7 +408,7 @@
                 <p>Our Chief Medical Officer leads our medical team, ensuring the highest standards of patient care and clinical excellence throughout the hospital.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.facebook.com/Katitomedical"><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
@@ -426,7 +426,7 @@
                 <p>Our dedicated Anesthetists ensure your safety and comfort during surgical procedures with expert pain management and anesthesia care.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.facebook.com/Katitomedical"><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
@@ -444,7 +444,7 @@
                 <p>Our experienced Surgeons offer advanced surgical care, utilizing the latest techniques to ensure optimal outcomes for a wide range of medical conditions.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.facebook.com/Katitomedical"><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
@@ -462,7 +462,7 @@
                 <p>Our skilled Obstetricians and Gynaecologists provide comprehensive care for women's reproductive health, from routine check-ups to childbirth and specialized treatments.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.facebook.com/Katitomedical"><i class="ri-facebook-fill"></i></a>
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
@@ -631,7 +631,7 @@
                 <strong>Email:</strong> info@kmckenya.co.ke<br>
               </p>
               <div class="social-links mt-3">
-                <a href="https://www.facebook.com/groups/577400563258704" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.facebook.com/Katitomedical" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>  
