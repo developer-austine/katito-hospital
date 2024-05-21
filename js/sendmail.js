@@ -30,11 +30,11 @@ const appointmentMessage = document.querySelector(".appointmentMessage");
 
 function getFormData() {
 	if (
-		appointmentName !== "" &&
-		appointmentEmail !== "" &&
-		appointmentPhone !== "" &&
-		appointmentDate !== "" &&
-		appointmentAge !== ""
+		appointmentName.value !== "" &&
+		appointmentEmail.value !== "" &&
+		appointmentPhone.value !== "" &&
+		appointmentDate.value !== "" &&
+		appointmentAge.value !== ""
 	) {
 		return {
 			name: appointmentName.value,
@@ -75,7 +75,7 @@ function makeBodyMessage() {
 async function sendEmail(email, subject, body) {
 	await Email.send({
 		SecureToken: "b9749664-6cd7-42e4-ac29-36d4337dc1f2",
-		To: "info@kmckenya.co.ke",
+		To: "katitomedicalcentre@gmail.com",
 		From: email,
 		Subject: subject,
 		Body: body,
