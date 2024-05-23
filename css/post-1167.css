@@ -1,0 +1,75 @@
+.elementor-1167 .elementor-element.elementor-element-3670f96.elementor-view-stacked .elementor-icon {
+  background-color:#EAEAEA;
+  fill:#00CE0F;
+  color:#00CE0F;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96.elementor-view-framed .elementor-icon,
+.elementor-1167 .elementor-element.elementor-element-3670f96.elementor-view-default .elementor-icon {
+  fill:#EAEAEA;
+  color:#EAEAEA;
+  border-color:#EAEAEA;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96.elementor-view-framed .elementor-icon {
+  background-color:#00CE0F;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 {
+  --icon-box-icon-margin:0px;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon {
+  font-size:37px;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon-box-wrapper {
+  text-align:center;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon-box-title {
+  margin-bottom:7px;
+  color:var( --e-global-color-bb890b8 );
+  -webkit-text-stroke-color:#000;
+  stroke:#000;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon-box-title,
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon-box-title a {
+  font-size:14px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.elementor-1167 .elementor-element.elementor-element-3670f96 .elementor-icon-box-description {
+  color:#000000;
+  font-size:14px;
+  font-weight:300;
+}
+.elementor-1167 .elementor-element.elementor-element-88ffacc .elementor-button {
+  font-size:12px;
+  font-weight:400;
+  background-color:var( --e-global-color-7dba3a4 );
+  border-style:solid;
+  border-width:0px 0px 0px 0px;
+  border-radius:999px 999px 999px 999px;
+  padding:7px 23px 5px 23px;
+}
+#elementor-popup-modal-1167 .dialog-message {
+  width:343px;
+  height:auto;
+}
+#elementor-popup-modal-1167 {
+  justify-content:center;
+  align-items:center;
+  pointer-events:all;
+  background-color:rgba(0,0,0,.8);
+}
+#elementor-popup-modal-1167 .dialog-widget-content {
+  border-radius:5px 5px 5px 5px;
+  box-shadow:2px 8px 23px 3px rgba(0,0,0,0.2);
+}
+@media(max-width:767px) {
+  #elementor-popup-modal-1167 .dialog-message {
+    width:100vw;
+  }
+  #elementor-popup-modal-1167 {
+    justify-content:center;
+    align-items:flex-end;
+  }
+  #elementor-popup-modal-1167 .dialog-widget-content {
+    border-radius:20px 20px 0px 0px;
+  }
+}
