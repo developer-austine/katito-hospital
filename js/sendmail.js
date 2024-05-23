@@ -71,17 +71,17 @@ function makeBodyMessage() {
 
 	sendEmail("info@kmckenya.co.ke", "Appointment", bodyMessage);
 }
-
 async function sendEmail(email, subject, body) {
-	await Email.send({
-		SecureToken: "b9749664-6cd7-42e4-ac29-36d4337dc1f2",
-		To: "katitomedicalcentre@gmail.com",
-		From: email,
-		Subject: subject,
-		Body: body,
-	}).then((message) => {
+	try {
+		const message = await Email.send({
+			SecureToken: "b9749664-6cd7-42e4-ac29-36d4337dc1f2",
+			To: "katitomedicalcentre@gmail.com",
+			From: email,
+			Subject: subject,
+			Body: body,
+		});
+
 		if (message === "OK") {
-			// alert("Message was sent successfully.");
 			Swal.fire({
 				icon: "success",
 				text: "Message was sent successfully.",
@@ -95,13 +95,18 @@ async function sendEmail(email, subject, body) {
 			Swal.fire({
 				icon: "error",
 				title: "Oops...",
-				text: "Something went wrong! Message was not sent",
+				text: "Something went wrong! Message was not sent.",
 			});
 			console.log("Message was not sent.");
 		}
-		// alert(message);
-		// console.log(message);
-	});
+	} catch (error) {
+		Swal.fire({
+			icon: "error",
+			title: "Oops...",
+			text: "An error occurred while sending the email.",
+		});
+		console.error("Error sending email:", error);
+	}
 }
 
 function getInquiryData() {

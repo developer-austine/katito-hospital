@@ -7,5 +7,6 @@
 		"Nephrology",
 		"Nyanza",
 		"purecounter"
-	]
+	],
+	"liveServer.settings.port": 5501
 }

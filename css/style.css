@@ -4,6 +4,7 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	color: #444444;
+	background-color: #f8f8f8;
 }
 
 a {
@@ -323,11 +324,11 @@ section {
 
 /*--------------------------------------------------------------
 # Home Section
---------------------------------------------------------------*/
+/* --------------------------------------------------------------*/
 #home {
 	width: 100%;
 	height: 90vh;
-	background: url("../img/home.jpg") top center;
+	/* background: url("../img/home.jpg") top center; */
 	background-size: cover;
 	margin-bottom: -200px;
 }
@@ -1151,4 +1152,34 @@ h5 {
 
 #logoImage {
 	transform: scale(1.2);
+}
+
+/* Custom */
+@keyframes backgroundChange {
+	0% {
+		background-image: url("../img/home.jpg");
+	}
+	33.33% {
+		background-image: url("../image/about.jpg");
+	}
+	66.66% {
+		background-image: url("../img/doc.jpg");
+	}
+	100% {
+		background-image: url("../img/doc2.jpg");
+	}
+}
+
+#heading {
+	padding-top: 250px;
+	background-color: #111;
+	background-size: cover; /* Adjusted to cover to ensure the image covers the heading area */
+	height: 85vh;
+	animation: backgroundChange 21s infinite; /* 7s per image in a cycle of 3 images */
+}
+.appointmentMessage {
+	resize: none;
+}
+.KATITO {
+	text-shadow: 5px 5px 4px #f1f7fd;
 }
